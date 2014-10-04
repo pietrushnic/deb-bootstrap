@@ -1,2 +1,2 @@
-sudo apt-get -y install git puppet
+sudo apt-get -y install git puppet &&
 git clone https://github.com/pietrushnic/deb-bootstrap src/deb-bootstrap
