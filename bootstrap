@@ -2,4 +2,4 @@ sudo apt-get -y install git puppet &&
 git clone https://github.com/pietrushnic/deb-bootstrap.git src/deb-bootstrap &&
 sudo puppet module install puppetlabs/vcsrepo &&
 sudo puppet module install saz/sudo &&
-sudo puppet apply $HOME/src/deb-boostrap/sys-conf.pp
+sudo puppet apply $HOME/src/deb-bootstrap/sys-conf.pp
