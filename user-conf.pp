@@ -3,6 +3,9 @@ vcsrepo { "/home/$id/src/oh-my-zsh":
     ensure   => present,
     provider => git,
     source   => "https://github.com/pietrushnic/oh-my-zsh",
+    user     => $id,
+    owner    => $id,
+    group    => $id
 }
 ->
 file { "/home/$id/.oh-my-zsh":
@@ -62,6 +65,9 @@ vcsrepo { "/home/$id/src/spf13-vim":
     ensure   => present,
     provider => git,
     source   => "https://github.com/pietrushnic/spf13-vim",
+    user     => $id,
+    owner    => $id,
+    group    => $id
 }
 ->
 file { "/home/$id/.spf13-vim-3":
