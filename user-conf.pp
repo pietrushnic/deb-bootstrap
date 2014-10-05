@@ -3,9 +3,6 @@ vcsrepo { "/home/$id/src/oh-my-zsh":
     ensure   => present,
     provider => git,
     source   => "https://github.com/pietrushnic/oh-my-zsh",
-    user     => $id,
-    owner    => $id,
-    group    => $id
 }
 ->
 file { "/home/$id/.oh-my-zsh":
@@ -22,38 +19,11 @@ file { "/home/$id/.zshrc":
     group  => $id
 }
 
-# task
-vcsrepo { "/home/$id/src/taskwarrior":
-    ensure   => present,
-    provider => git,
-    source   => "git@bitbucket.org:pietrushnic/taskwarrior.git",
-    user     => $id,
-    owner    => $id,
-    group    => $id
-}
-->
-file { "/home/$id/.task":
-    ensure => link,
-    target => "/home/$id/src/taskwarrior/task",
-    owner  => $id,
-    group  => $id
-}
-->
-file { "/home/$id/.taskrc":
-    ensure => link,
-    target => "/home/$id/src/taskwarrior/taskrc",
-    owner  => $id,
-    group  => $id
-}
-
 # tmuxinator
 vcsrepo { "/home/$id/src/tmuxinator-conf":
     ensure   => present,
     provider => git,
     source   => "git@bitbucket.org:pietrushnic/tmuxinator-conf.git",
-    user     => $id,
-    owner    => $id,
-    group    => $id
 }
 ->
 file { "/home/$id/.tmuxinator":
@@ -106,9 +76,6 @@ vcsrepo { "/home/$id/src/spf13-vim":
     ensure   => present,
     provider => git,
     source   => "https://github.com/pietrushnic/spf13-vim",
-    user     => $id,
-    owner    => $id,
-    group    => $id
 }
 ->
 file { "/home/$id/.spf13-vim-3":
