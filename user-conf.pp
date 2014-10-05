@@ -19,20 +19,6 @@ file { "/home/$id/.zshrc":
     group  => $id
 }
 
-# tmuxinator
-vcsrepo { "/home/$id/src/tmuxinator-conf":
-    ensure   => present,
-    provider => git,
-    source   => "git@bitbucket.org:pietrushnic/tmuxinator-conf.git",
-}
-->
-file { "/home/$id/.tmuxinator":
-    ensure => link,
-    target => "/home/$id/src/tmuxinator-conf",
-    owner  => $id,
-    group  => $id
-}
-
 # dotfiles
 vcsrepo { "/home/$id/src/dotfiles":
     ensure   => present,
