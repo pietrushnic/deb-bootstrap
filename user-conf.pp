@@ -76,3 +76,17 @@ file { "/home/$id/.spf13-vim-3":
     owner  => $id,
     group  => $id
 }
+->
+file { "/home/$id/.vimrc.local":
+    ensure => link,
+    target => "/home/$id/src/spf13-vim/.vimrc.local",
+    owner  => $id,
+    group  => $id
+}
+->
+file { "/home/$id/.vimrc.bundles.local":
+    ensure => link,
+    target => "/home/$id/src/spf13-vim/.vimrc.bundles.local",
+    owner  => $id,
+    group  => $id
+}
